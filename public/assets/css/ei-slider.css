@@ -1,0 +1,128 @@
+/****** Main Slider ******/
+.ei-slider{
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    height: 300px;
+    /*margin: 5px auto 0 auto;*/
+}
+.ei-slider-loading{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    color: #ccc;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 300px;
+}
+.ei-slider-large{
+    height: 100%;
+    width: 100%;
+    position:relative;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+.ei-slider-large li{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.ei-slider-large li img{
+    width: 100%;
+}
+.ei-title{
+  position: absolute;
+  right: 50%;
+  margin-right: 13%;
+  top: 25%;
+}
+.ei-title h2, .ei-title h3{
+  text-align: right;
+}
+.ei-title h2{
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 0px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #333;
+}
+.ei-title h3{
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 0px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #666;
+}
+.ei-slider-thumbs{
+    height: 3px;
+    margin: 0 auto;
+    position: relative;
+}
+.ei-slider-thumbs li{
+    position: relative;
+    float: left;
+    height: 100%;
+}
+.ei-slider-thumbs li.ei-slider-element{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: 2;
+    text-indent: -9000px;
+    background: #333;
+    background: rgba(0,0,0,0.9);
+}
+.ei-slider-thumbs li a{
+    display: block;
+    text-indent: -9000px;
+    background: #c3c3c3 ;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+    -ms-transition: background 0.2s ease;
+    transition: background 0.2s ease;
+}
+.ei-slider-thumbs li a:hover{
+    background-color: #f0f0f0;
+}
+.ei-slider-thumbs li img{
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    z-index: 9;
+    max-width: 100%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-box-reflect:
+        below 0px -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(transparent),
+            color-stop(50%, transparent),
+            to(rgba(255,255,255,0.3))
+            );
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.ei-slider-thumbs li:hover img{
+    opacity: 1;
+    bottom: 3px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/****** End of Main Slider ******/

@@ -1,0 +1,2890 @@
+Illuminate\Database\Eloquent\Builder {#1839
+  #query: Illuminate\Database\Query\Builder {#1832
+    +connection: Illuminate\Database\MySqlConnection {#24
+      #pdo: Doctrine\DBAL\Driver\PDOConnection {#1835
+        inTransaction: false
+        attributes: {
+          CASE: NATURAL
+          ERRMODE: EXCEPTION
+          AUTOCOMMIT: 1
+          PERSISTENT: false
+          DRIVER_NAME: "mysql"
+          SERVER_INFO: "Uptime: 9853  Threads: 2  Questions: 1087  Slow queries: 0  Opens: 493  Flush tables: 3  Open tables: 414  Queries per second avg: 0.110"
+          ORACLE_NULLS: NATURAL
+          CLIENT_VERSION: "mysqlnd 5.0.12-dev - 20150407 - $Id: 7cc7cc96e675f6d72e5cf0f267f48e167c2abb23 $"
+          SERVER_VERSION: "8.0.22-0ubuntu0.20.04.3"
+          STATEMENT_CLASS: array:2 [
+            0 => "Doctrine\DBAL\Driver\PDO\Statement"
+            1 => []
+          ]
+          EMULATE_PREPARES: 0
+          CONNECTION_STATUS: "127.0.0.1 via TCP/IP"
+          DEFAULT_FETCH_MODE: BOTH
+        }
+      }
+      #readPdo: null
+      #database: "freemanna"
+      #tablePrefix: ""
+      #config: array:15 [
+        "driver" => "mysql"
+        "host" => "127.0.0.1"
+        "port" => "3306"
+        "database" => "freemanna"
+        "username" => "root"
+        "password" => "admin"
+        "unix_socket" => ""
+        "charset" => "utf8mb4"
+        "collation" => "utf8mb4_unicode_ci"
+        "prefix" => ""
+        "prefix_indexes" => true
+        "strict" => true
+        "engine" => null
+        "options" => []
+        "name" => "mysql"
+      ]
+      #reconnector: Closure($connection) {#64
+        class: "Illuminate\Database\DatabaseManager"
+        this: Illuminate\Database\DatabaseManager {#60 …}
+        file: "./vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php"
+        line: "64 to 66"
+      }
+      #queryGrammar: Illuminate\Database\Query\Grammars\MySqlGrammar {#1824
+        #operators: array:1 [
+          0 => "sounds like"
+        ]
+        #selectComponents: array:11 [
+          0 => "aggregate"
+          1 => "columns"
+          2 => "from"
+          3 => "joins"
+          4 => "wheres"
+          5 => "groups"
+          6 => "havings"
+          7 => "orders"
+          8 => "limit"
+          9 => "offset"
+          10 => "lock"
+        ]
+        #tablePrefix: ""
+      }
+      #schemaGrammar: null
+      #postProcessor: Illuminate\Database\Query\Processors\MySqlProcessor {#1831}
+      #events: Illuminate\Events\Dispatcher {#26
+        #container: Illuminate\Foundation\Application {#2
+          #basePath: "/var/www/Projects/FREEMANNA"
+          #hasBeenBootstrapped: true
+          #booted: true
+          #bootingCallbacks: array:1 [
+            0 => Closure() {#199
+              class: "Illuminate\Foundation\Application"
+              this: Illuminate\Foundation\Application {#2}
+              use: { …1}
+              file: "./vendor/laravel/framework/src/Illuminate/Foundation/Application.php"
+              line: "764 to 766"
+            }
+          ]
+          #bootedCallbacks: array:3 [
+            0 => Closure() {#29
+              class: "Illuminate\Foundation\Console\Kernel"
+              this: App\Console\Kernel {#28
+                #commands: array:1 [ …1]
+                #app: Illuminate\Foundation\Application {#2}
+                #events: Illuminate\Events\Dispatcher {#26}
+                #artisan: Illuminate\Console\Application {#1398 …18}
+                #commandsLoaded: true
+                #bootstrappers: array:7 [ …7]
+              }
+              file: "./vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php"
+              line: "88 to 90"
+            }
+            1 => Closure() {#223
+              class: "Maatwebsite\Excel\ExcelServiceProvider"
+              this: Maatwebsite\Excel\ExcelServiceProvider {#146
+                #app: Illuminate\Foundation\Application {#2}
+              }
+              file: "./vendor/maatwebsite/excel/src/ExcelServiceProvider.php"
+              line: "46 to 48"
+            }
+            2 => Closure() {#245
+              class: "Illuminate\Foundation\Support\Providers\RouteServiceProvider"
+              this: App\Providers\RouteServiceProvider {#175
+                #namespace: "App\Http\Controllers"
+                #app: Illuminate\Foundation\Application {#2}
+              }
+              file: "./vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php"
+              line: "38 to 41"
+            }
+          ]
+          #terminatingCallbacks: []
+          #serviceProviders: array:46 [
+            0 => Illuminate\Events\EventServiceProvider {#6 …}
+            1 => Illuminate\Log\LogServiceProvider {#8
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            2 => Illuminate\Routing\RoutingServiceProvider {#10
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            3 => Illuminate\Auth\AuthServiceProvider {#59
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            4 => Illuminate\Cookie\CookieServiceProvider {#71
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            5 => Illuminate\Database\DatabaseServiceProvider {#73
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            6 => Illuminate\Encryption\EncryptionServiceProvider {#80
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            7 => Illuminate\Filesystem\FilesystemServiceProvider {#83
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            8 => Illuminate\Foundation\Providers\FormRequestServiceProvider {#89
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            9 => Illuminate\Foundation\Providers\FoundationServiceProvider {#88
+              #providers: array:1 [ …1]
+              #instances: array:1 [ …1]
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            10 => Illuminate\Notifications\NotificationServiceProvider {#93
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            11 => Illuminate\Pagination\PaginationServiceProvider {#95
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            12 => Illuminate\Session\SessionServiceProvider {#100
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            13 => Illuminate\View\ViewServiceProvider {#104
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            14 => ArielMejiaDev\LarapexCharts\LarapexChartsServiceProvider {#109
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            15 => Facade\Ignition\IgnitionServiceProvider {#110
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            16 => Fideloper\Proxy\TrustedProxyServiceProvider {#132
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            17 => Fruitcake\Cors\CorsServiceProvider {#131
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            18 => Intervention\Image\ImageServiceProvider {#135
+              #defer: false
+              #provider: Intervention\Image\ImageServiceProviderLaravelRecent {#136 …1}
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            19 => Laravel\Ui\UiServiceProvider {#144
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            20 => Maatwebsite\Excel\ExcelServiceProvider {#146}
+            21 => Carbon\Laravel\ServiceProvider {#158
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            22 => NunoMaduro\Collision\Adapters\Laravel\CollisionServiceProvider {#159
+              #defer: true
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            23 => Spatie\MediaLibrary\MediaLibraryServiceProvider {#162
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            24 => App\Providers\AppServiceProvider {#172
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            25 => App\Providers\AuthServiceProvider {#173
+              #policies: []
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            26 => App\Providers\EventServiceProvider {#174
+              #listen: array:1 [ …1]
+              #subscribe: []
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            27 => App\Providers\RouteServiceProvider {#175}
+            28 => Illuminate\Queue\QueueServiceProvider {#193
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            29 => Illuminate\Broadcasting\BroadcastServiceProvider {#61
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            30 => Illuminate\Bus\BusServiceProvider {#246
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            31 => Illuminate\Cache\CacheServiceProvider {#1249
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            32 => Illuminate\Foundation\Providers\ArtisanServiceProvider {#1276
+              #commands: array:33 [ …33]
+              #devCommands: array:31 [ …31]
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            33 => Illuminate\Database\MigrationServiceProvider {#1342
+              #commands: array:8 [ …8]
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            34 => Illuminate\Foundation\Providers\ComposerServiceProvider {#1355
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            35 => Illuminate\Foundation\Providers\ConsoleSupportServiceProvider {#1275
+              #providers: array:3 [ …3]
+              #instances: array:3 [ …3]
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            36 => Illuminate\Hashing\HashServiceProvider {#1357
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            37 => Illuminate\Mail\MailServiceProvider {#1360
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            38 => Illuminate\Pipeline\PipelineServiceProvider {#1364
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            39 => Illuminate\Redis\RedisServiceProvider {#1366
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            40 => Illuminate\Auth\Passwords\PasswordResetServiceProvider {#1369
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            41 => Illuminate\Translation\TranslationServiceProvider {#1372
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            42 => Illuminate\Validation\ValidationServiceProvider {#1375
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            43 => Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider {#1378
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            44 => Laravel\Tinker\TinkerServiceProvider {#1388
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            45 => Collective\Html\HtmlServiceProvider {#1392
+              #directives: array:51 [ …51]
+              #app: Illuminate\Foundation\Application {#2}
+            }
+          ]
+          #loadedProviders: array:46 [
+            "Illuminate\Events\EventServiceProvider" => true
+            "Illuminate\Log\LogServiceProvider" => true
+            "Illuminate\Routing\RoutingServiceProvider" => true
+            "Illuminate\Auth\AuthServiceProvider" => true
+            "Illuminate\Cookie\CookieServiceProvider" => true
+            "Illuminate\Database\DatabaseServiceProvider" => true
+            "Illuminate\Encryption\EncryptionServiceProvider" => true
+            "Illuminate\Filesystem\FilesystemServiceProvider" => true
+            "Illuminate\Foundation\Providers\FormRequestServiceProvider" => true
+            "Illuminate\Foundation\Providers\FoundationServiceProvider" => true
+            "Illuminate\Notifications\NotificationServiceProvider" => true
+            "Illuminate\Pagination\PaginationServiceProvider" => true
+            "Illuminate\Session\SessionServiceProvider" => true
+            "Illuminate\View\ViewServiceProvider" => true
+            "ArielMejiaDev\LarapexCharts\LarapexChartsServiceProvider" => true
+            "Facade\Ignition\IgnitionServiceProvider" => true
+            "Fideloper\Proxy\TrustedProxyServiceProvider" => true
+            "Fruitcake\Cors\CorsServiceProvider" => true
+            "Intervention\Image\ImageServiceProvider" => true
+            "Laravel\Ui\UiServiceProvider" => true
+            "Maatwebsite\Excel\ExcelServiceProvider" => true
+            "Carbon\Laravel\ServiceProvider" => true
+            "NunoMaduro\Collision\Adapters\Laravel\CollisionServiceProvider" => true
+            "Spatie\MediaLibrary\MediaLibraryServiceProvider" => true
+            "App\Providers\AppServiceProvider" => true
+            "App\Providers\AuthServiceProvider" => true
+            "App\Providers\EventServiceProvider" => true
+            "App\Providers\RouteServiceProvider" => true
+            "Illuminate\Queue\QueueServiceProvider" => true
+            "Illuminate\Broadcasting\BroadcastServiceProvider" => true
+            "Illuminate\Bus\BusServiceProvider" => true
+            "Illuminate\Cache\CacheServiceProvider" => true
+            "Illuminate\Foundation\Providers\ArtisanServiceProvider" => true
+            "Illuminate\Database\MigrationServiceProvider" => true
+            "Illuminate\Foundation\Providers\ComposerServiceProvider" => true
+            "Illuminate\Foundation\Providers\ConsoleSupportServiceProvider" => true
+            "Illuminate\Hashing\HashServiceProvider" => true
+            "Illuminate\Mail\MailServiceProvider" => true
+            "Illuminate\Pipeline\PipelineServiceProvider" => true
+            "Illuminate\Redis\RedisServiceProvider" => true
+            "Illuminate\Auth\Passwords\PasswordResetServiceProvider" => true
+            "Illuminate\Translation\TranslationServiceProvider" => true
+            "Illuminate\Validation\ValidationServiceProvider" => true
+            "Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" => true
+            "Laravel\Tinker\TinkerServiceProvider" => true
+            "Collective\Html\HtmlServiceProvider" => true
+          ]
+          #deferredServices: []
+          #appPath: null
+          #databasePath: null
+          #storagePath: null
+          #environmentPath: null
+          #environmentFile: ".env"
+          #isRunningInConsole: true
+          #namespace: "App\"
+          #absoluteCachePathPrefixes: array:2 [
+            0 => "/"
+            1 => "\"
+          ]
+          #resolved: array:141 [
+            "events" => true
+            "App\Console\Kernel" => true
+            "Illuminate\Contracts\Console\Kernel" => true
+            "Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables" => true
+            "Illuminate\Foundation\Bootstrap\LoadConfiguration" => true
+            "Illuminate\Foundation\Bootstrap\HandleExceptions" => true
+            "env" => true
+            "Illuminate\Foundation\Bootstrap\RegisterFacades" => true
+            "Illuminate\Foundation\PackageManifest" => true
+            "Illuminate\Foundation\Bootstrap\SetRequestForConsole" => true
+            "Illuminate\Foundation\Bootstrap\RegisterProviders" => true
+            "Facade\Ignition\LogRecorder\LogRecorder" => true
+            "Facade\Ignition\DumpRecorder\DumpRecorder" => true
+            "Facade\Ignition\QueryRecorder\QueryRecorder" => true
+            "flare.http" => true
+            "Facade\FlareClient\Flare" => true
+            "Facade\Ignition\Middleware\SetNotifierName" => true
+            "Facade\Ignition\Middleware\AddEnvironmentInformation" => true
+            "Facade\Ignition\Middleware\AddLogs" => true
+            "Facade\Ignition\Middleware\AddDumps" => true
+            "Facade\Ignition\Middleware\AddQueries" => true
+            "Facade\IgnitionContracts\SolutionProviderRepository" => true
+            "Facade\Ignition\Middleware\AddSolutions" => true
+            "App\Exceptions\Handler" => true
+            "Illuminate\Contracts\Debug\ExceptionHandler" => true
+            "Illuminate\Foundation\Bootstrap\BootProviders" => true
+            "db.factory" => true
+            "db" => true
+            "view.engine.resolver" => true
+            "files" => true
+            "blade.compiler" => true
+            "log" => true
+            "queue" => true
+            "router" => true
+            "url" => true
+            "Maatwebsite\Excel\Cache\CacheManager" => true
+            "Maatwebsite\Excel\SettingsProvider" => true
+            "Laravel\Ui\AuthCommand" => true
+            "Laravel\Ui\ControllersCommand" => true
+            "Laravel\Ui\UiCommand" => true
+            "Maatwebsite\Excel\Console\ExportMakeCommand" => true
+            "Maatwebsite\Excel\Console\ImportMakeCommand" => true
+            "Spatie\MediaLibrary\MediaRepository" => true
+            "Spatie\MediaLibrary\FileManipulator" => true
+            "Spatie\MediaLibrary\Commands\RegenerateCommand" => true
+            "command.medialibrary:regenerate" => true
+            "Spatie\MediaLibrary\Commands\ClearCommand" => true
+            "command.medialibrary:clear" => true
+            "filesystem" => true
+            "Spatie\MediaLibrary\PathGenerator\BasePathGenerator" => true
+            "Spatie\MediaLibrary\Commands\CleanCommand" => true
+            "command.medialibrary:clean" => true
+            "NunoMaduro\Collision\Adapters\Laravel\Commands\TestCommand" => true
+            "cache" => true
+            "command.cache.clear" => true
+            "command.cache.forget" => true
+            "command.clear-compiled" => true
+            "command.auth.resets.clear" => true
+            "command.config.cache" => true
+            "command.config.clear" => true
+            "command.db.wipe" => true
+            "command.down" => true
+            "command.environment" => true
+            "command.event.cache" => true
+            "command.event.clear" => true
+            "command.event.list" => true
+            "command.key.generate" => true
+            "command.optimize" => true
+            "command.optimize.clear" => true
+            "command.package.discover" => true
+            "command.queue.failed" => true
+            "command.queue.flush" => true
+            "command.queue.forget" => true
+            "queue.listener" => true
+            "command.queue.listen" => true
+            "cache.store" => true
+            "command.queue.restart" => true
+            "command.queue.retry" => true
+            "queue.worker" => true
+            "command.queue.work" => true
+            "command.route.cache" => true
+            "command.route.clear" => true
+            "command.route.list" => true
+            "command.seed" => true
+            "Illuminate\Console\Scheduling\ScheduleFinishCommand" => true
+            "Illuminate\Console\Scheduling\ScheduleRunCommand" => true
+            "command.storage.link" => true
+            "command.up" => true
+            "command.view.cache" => true
+            "command.view.clear" => true
+            "composer" => true
+            "command.cache.table" => true
+            "command.cast.make" => true
+            "command.channel.make" => true
+            "command.component.make" => true
+            "command.console.make" => true
+            "command.controller.make" => true
+            "command.event.generate" => true
+            "command.event.make" => true
+            "command.exception.make" => true
+            "command.factory.make" => true
+            "command.job.make" => true
+            "command.listener.make" => true
+            "command.mail.make" => true
+            "command.middleware.make" => true
+            "command.model.make" => true
+            "command.notification.make" => true
+            "command.notification.table" => true
+            "command.observer.make" => true
+            "command.policy.make" => true
+            "command.provider.make" => true
+            "command.queue.failed-table" => true
+            "command.queue.table" => true
+            "command.request.make" => true
+            "command.resource.make" => true
+            "command.rule.make" => true
+            "command.seeder.make" => true
+            "command.session.table" => true
+            "command.serve" => true
+            "command.stub.publish" => true
+            "command.test.make" => true
+            "command.vendor.publish" => true
+            "migration.repository" => true
+            "migrator" => true
+            "command.migrate" => true
+            "command.migrate.fresh" => true
+            "command.migrate.install" => true
+            "command.migrate.refresh" => true
+            "command.migrate.reset" => true
+            "command.migrate.rollback" => true
+            "command.migrate.status" => true
+            "migration.creator" => true
+            "command.migrate.make" => true
+            "command.ide-helper.generate" => true
+            "command.ide-helper.models" => true
+            "command.ide-helper.meta" => true
+            "command.ide-helper.eloquent" => true
+            "command.tinker" => true
+            "App\Console\Commands\DailyMarketClose" => true
+            "App\Console\Commands\DailyMarketOpen" => true
+            "Illuminate\Console\OutputStyle" => true
+          ]
+          #bindings: array:180 [
+            "Illuminate\Foundation\Mix" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#4 …5}
+              "shared" => true
+            ]
+            "Illuminate\Foundation\PackageManifest" => array:2 [
+              "concrete" => Closure() {#5 …4}
+              "shared" => true
+            ]
+            "events" => array:2 [
+              "concrete" => Closure($app) {#7 …4}
+              "shared" => true
+            ]
+            "log" => array:2 [
+              "concrete" => Closure($app) {#9 …4}
+              "shared" => true
+            ]
+            "router" => array:2 [
+              "concrete" => Closure($app) {#11 …4}
+              "shared" => true
+            ]
+            "url" => array:2 [
+              "concrete" => Closure($app) {#12 …4}
+              "shared" => true
+            ]
+            "redirect" => array:2 [
+              "concrete" => Closure($app) {#14 …4}
+              "shared" => true
+            ]
+            "Psr\Http\Message\ServerRequestInterface" => array:2 [
+              "concrete" => Closure($app) {#15 …4}
+              "shared" => false
+            ]
+            "Psr\Http\Message\ResponseInterface" => array:2 [
+              "concrete" => Closure() {#16 …4}
+              "shared" => false
+            ]
+            "Illuminate\Contracts\Routing\ResponseFactory" => array:2 [
+              "concrete" => Closure($app) {#17 …4}
+              "shared" => true
+            ]
+            "Illuminate\Routing\Contracts\ControllerDispatcher" => array:2 [
+              "concrete" => Closure($app) {#18 …4}
+              "shared" => true
+            ]
+            "Illuminate\Contracts\Http\Kernel" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#19 …5}
+              "shared" => true
+            ]
+            "Illuminate\Contracts\Console\Kernel" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#20 …5}
+              "shared" => true
+            ]
+            "Illuminate\Contracts\Debug\ExceptionHandler" => array:2 [
+              "concrete" => Closure($app) {#163 …5}
+              "shared" => true
+            ]
+            "env" => array:2 [
+              "concrete" => Closure() {#55 …5}
+              "shared" => false
+            ]
+            "auth" => array:2 [
+              "concrete" => Closure($app) {#65 …4}
+              "shared" => true
+            ]
+            "auth.driver" => array:2 [
+              "concrete" => Closure($app) {#63 …4}
+              "shared" => true
+            ]
+            "Illuminate\Contracts\Auth\Authenticatable" => array:2 [
+              "concrete" => Closure($app) {#66 …4}
+              "shared" => false
+            ]
+            "Illuminate\Contracts\Auth\Access\Gate" => array:2 [
+              "concrete" => Closure($app) {#67 …4}
+              "shared" => true
+            ]
+            "Illuminate\Auth\Middleware\RequirePassword" => array:2 [
+              "concrete" => Closure($app) {#68 …4}
+              "shared" => false
+            ]
+            "cookie" => array:2 [
+              "concrete" => Closure($app) {#72 …4}
+              "shared" => true
+            ]
+            "db.factory" => array:2 [
+              "concrete" => Closure($app) {#74 …4}
+              "shared" => true
+            ]
+            "db" => array:2 [
+              "concrete" => Closure($app) {#75 …4}
+              "shared" => true
+            ]
+            "db.connection" => array:2 [
+              "concrete" => Closure($app) {#76 …4}
+              "shared" => false
+            ]
+            "Faker\Generator" => array:2 [
+              "concrete" => Closure($app, $parameters) {#77 …4}
+              "shared" => true
+            ]
+            "Illuminate\Database\Eloquent\Factory" => array:2 [
+              "concrete" => Closure($app) {#78 …4}
+              "shared" => true
+            ]
+            "Illuminate\Contracts\Queue\EntityResolver" => array:2 [
+              "concrete" => Closure() {#79 …4}
+              "shared" => true
+            ]
+            "encrypter" => array:2 [
+              "concrete" => Closure($app) {#81 …4}
+              "shared" => true
+            ]
+            "files" => array:2 [
+              "concrete" => Closure() {#84 …4}
+              "shared" => true
+            ]
+            "filesystem" => array:2 [
+              "concrete" => Closure($app) {#85 …4}
+              "shared" => true
+            ]
+            "filesystem.disk" => array:2 [
+              "concrete" => Closure($app) {#86 …4}
+              "shared" => true
+            ]
+            "filesystem.cloud" => array:2 [
+              "concrete" => Closure($app) {#87 …4}
+              "shared" => true
+            ]
+            "Illuminate\Notifications\ChannelManager" => array:2 [
+              "concrete" => Closure($app) {#94 …4}
+              "shared" => true
+            ]
+            "session" => array:2 [
+              "concrete" => Closure($app) {#101 …4}
+              "shared" => true
+            ]
+            "session.store" => array:2 [
+              "concrete" => Closure($app) {#102 …4}
+              "shared" => true
+            ]
+            "Illuminate\Session\Middleware\StartSession" => array:2 [
+              "concrete" => Closure() {#103 …4}
+              "shared" => true
+            ]
+            "view" => array:2 [
+              "concrete" => Closure($app) {#105 …4}
+              "shared" => true
+            ]
+            "view.finder" => array:2 [
+              "concrete" => Closure($app) {#106 …4}
+              "shared" => false
+            ]
+            "blade.compiler" => array:2 [
+              "concrete" => Closure($app) {#107 …4}
+              "shared" => true
+            ]
+            "view.engine.resolver" => array:2 [
+              "concrete" => Closure() {#108 …4}
+              "shared" => true
+            ]
+            "Facade\IgnitionContracts\SolutionProviderRepository" => array:2 [
+              "concrete" => Closure() {#111 …4}
+              "shared" => true
+            ]
+            "Facade\Ignition\ErrorPage\Renderer" => array:2 [
+              "concrete" => Closure() {#112 …4}
+              "shared" => false
+            ]
+            "Whoops\Handler\HandlerInterface" => array:2 [
+              "concrete" => Closure(Application $app) {#113 …4}
+              "shared" => false
+            ]
+            "Facade\Ignition\IgnitionConfig" => array:2 [
+              "concrete" => Closure() {#114 …4}
+              "shared" => true
+            ]
+            "flare.http" => array:2 [
+              "concrete" => Closure() {#115 …4}
+              "shared" => true
+            ]
+            "Facade\FlareClient\Flare" => array:2 [
+              "concrete" => Closure() {#116 …4}
+              "shared" => true
+            ]
+            "Facade\Ignition\LogRecorder\LogRecorder" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#119 …5}
+              "shared" => true
+            ]
+            "Facade\Ignition\DumpRecorder\DumpRecorder" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#117 …5}
+              "shared" => true
+            ]
+            "Facade\Ignition\QueryRecorder\QueryRecorder" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#122 …5}
+              "shared" => true
+            ]
+            "Asm89\Stack\CorsService" => array:2 [
+              "concrete" => Closure($app) {#130 …4}
+              "shared" => true
+            ]
+            "image" => array:2 [
+              "concrete" => Closure($app) {#143 …4}
+              "shared" => true
+            ]
+            "Maatwebsite\Excel\Cache\CacheManager" => array:2 [
+              "concrete" => Closure() {#147 …4}
+              "shared" => false
+            ]
+            "Maatwebsite\Excel\Transactions\TransactionManager" => array:2 [
+              "concrete" => Closure() {#148 …4}
+              "shared" => false
+            ]
+            "Maatwebsite\Excel\Transactions\TransactionHandler" => array:2 [
+              "concrete" => Closure() {#149 …4}
+              "shared" => false
+            ]
+            "Maatwebsite\Excel\Files\TemporaryFileFactory" => array:2 [
+              "concrete" => Closure() {#150 …4}
+              "shared" => false
+            ]
+            "Maatwebsite\Excel\Files\Filesystem" => array:2 [
+              "concrete" => Closure() {#151 …4}
+              "shared" => false
+            ]
+            "excel" => array:2 [
+              "concrete" => Closure() {#152 …4}
+              "shared" => false
+            ]
+            "NunoMaduro\Collision\Contracts\Provider" => array:2 [
+              "concrete" => Closure() {#160 …4}
+              "shared" => false
+            ]
+            "Spatie\MediaLibrary\MediaRepository" => array:2 [
+              "concrete" => Closure() {#166 …4}
+              "shared" => true
+            ]
+            "command.medialibrary:regenerate" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#161 …5}
+              "shared" => false
+            ]
+            "command.medialibrary:clear" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#165 …5}
+              "shared" => false
+            ]
+            "command.medialibrary:clean" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#167 …5}
+              "shared" => false
+            ]
+            "Spatie\MediaLibrary\Filesystem\Filesystem" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#168 …5}
+              "shared" => false
+            ]
+            "Spatie\MediaLibrary\ResponsiveImages\WidthCalculator\WidthCalculator" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#169 …5}
+              "shared" => false
+            ]
+            "Spatie\MediaLibrary\ResponsiveImages\TinyPlaceholderGenerator\TinyPlaceholderGenerator" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#170 …5}
+              "shared" => false
+            ]
+            "flare.logger" => array:2 [
+              "concrete" => Closure($app) {#184 …4}
+              "shared" => true
+            ]
+            "command.flare:test" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#185 …5}
+              "shared" => false
+            ]
+            "command.make:solution" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#191 …5}
+              "shared" => false
+            ]
+            "command.make:solution-provider" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#192 …5}
+              "shared" => false
+            ]
+            "queue" => array:2 [
+              "concrete" => Closure($app) {#194 …4}
+              "shared" => true
+            ]
+            "queue.connection" => array:2 [
+              "concrete" => Closure($app) {#195 …4}
+              "shared" => true
+            ]
+            "queue.worker" => array:2 [
+              "concrete" => Closure($app) {#196 …4}
+              "shared" => true
+            ]
+            "queue.listener" => array:2 [
+              "concrete" => Closure($app) {#197 …4}
+              "shared" => true
+            ]
+            "queue.failer" => array:2 [
+              "concrete" => Closure($app) {#198 …4}
+              "shared" => true
+            ]
+            "Facade\Ignition\DumpRecorder\MultiDumpHandler" => array:2 [
+              "concrete" => Closure() {#212 …5}
+              "shared" => true
+            ]
+            "Illuminate\Console\Scheduling\Schedule" => array:2 [
+              "concrete" => Closure($app) {#46 …4}
+              "shared" => true
+            ]
+            "Illuminate\Broadcasting\BroadcastManager" => array:2 [
+              "concrete" => Closure($app) {#279 …4}
+              "shared" => true
+            ]
+            "Illuminate\Contracts\Broadcasting\Broadcaster" => array:2 [
+              "concrete" => Closure($app) {#265 …4}
+              "shared" => true
+            ]
+            "Illuminate\Bus\Dispatcher" => array:2 [
+              "concrete" => Closure($app) {#62 …4}
+              "shared" => true
+            ]
+            "cache" => array:2 [
+              "concrete" => Closure($app) {#1250 …4}
+              "shared" => true
+            ]
+            "cache.store" => array:2 [
+              "concrete" => Closure($app) {#1251 …4}
+              "shared" => true
+            ]
+            "cache.psr6" => array:2 [
+              "concrete" => Closure($app) {#1266 …4}
+              "shared" => true
+            ]
+            "memcached.connector" => array:2 [
+              "concrete" => Closure() {#1274 …4}
+              "shared" => true
+            ]
+            "command.cache.clear" => array:2 [
+              "concrete" => Closure($app) {#1277 …4}
+              "shared" => true
+            ]
+            "command.cache.forget" => array:2 [
+              "concrete" => Closure($app) {#1278 …4}
+              "shared" => true
+            ]
+            "command.clear-compiled" => array:2 [
+              "concrete" => Closure() {#1279 …4}
+              "shared" => true
+            ]
+            "command.auth.resets.clear" => array:2 [
+              "concrete" => Closure() {#1280 …4}
+              "shared" => true
+            ]
+            "command.config.cache" => array:2 [
+              "concrete" => Closure($app) {#1281 …4}
+              "shared" => true
+            ]
+            "command.config.clear" => array:2 [
+              "concrete" => Closure($app) {#1282 …4}
+              "shared" => true
+            ]
+            "command.db.wipe" => array:2 [
+              "concrete" => Closure() {#1283 …4}
+              "shared" => true
+            ]
+            "command.down" => array:2 [
+              "concrete" => Closure() {#1284 …4}
+              "shared" => true
+            ]
+            "command.environment" => array:2 [
+              "concrete" => Closure() {#1285 …4}
+              "shared" => true
+            ]
+            "command.event.cache" => array:2 [
+              "concrete" => Closure() {#1286 …4}
+              "shared" => true
+            ]
+            "command.event.clear" => array:2 [
+              "concrete" => Closure($app) {#1287 …4}
+              "shared" => true
+            ]
+            "command.event.list" => array:2 [
+              "concrete" => Closure() {#1288 …4}
+              "shared" => true
+            ]
+            "command.key.generate" => array:2 [
+              "concrete" => Closure() {#1289 …4}
+              "shared" => true
+            ]
+            "command.optimize" => array:2 [
+              "concrete" => Closure() {#1290 …4}
+              "shared" => true
+            ]
+            "command.optimize.clear" => array:2 [
+              "concrete" => Closure() {#1291 …4}
+              "shared" => true
+            ]
+            "command.package.discover" => array:2 [
+              "concrete" => Closure() {#1292 …4}
+              "shared" => true
+            ]
+            "command.queue.failed" => array:2 [
+              "concrete" => Closure() {#1293 …4}
+              "shared" => true
+            ]
+            "command.queue.flush" => array:2 [
+              "concrete" => Closure() {#1294 …4}
+              "shared" => true
+            ]
+            "command.queue.forget" => array:2 [
+              "concrete" => Closure() {#1295 …4}
+              "shared" => true
+            ]
+            "command.queue.listen" => array:2 [
+              "concrete" => Closure($app) {#1296 …4}
+              "shared" => true
+            ]
+            "command.queue.restart" => array:2 [
+              "concrete" => Closure($app) {#1297 …4}
+              "shared" => true
+            ]
+            "command.queue.retry" => array:2 [
+              "concrete" => Closure() {#1298 …4}
+              "shared" => true
+            ]
+            "command.queue.work" => array:2 [
+              "concrete" => Closure($app) {#1299 …4}
+              "shared" => true
+            ]
+            "command.route.cache" => array:2 [
+              "concrete" => Closure($app) {#1300 …4}
+              "shared" => true
+            ]
+            "command.route.clear" => array:2 [
+              "concrete" => Closure($app) {#1301 …4}
+              "shared" => true
+            ]
+            "command.route.list" => array:2 [
+              "concrete" => Closure($app) {#1302 …4}
+              "shared" => true
+            ]
+            "command.seed" => array:2 [
+              "concrete" => Closure($app) {#1303 …4}
+              "shared" => true
+            ]
+            "Illuminate\Console\Scheduling\ScheduleFinishCommand" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#1304 …5}
+              "shared" => true
+            ]
+            "Illuminate\Console\Scheduling\ScheduleRunCommand" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#1305 …5}
+              "shared" => true
+            ]
+            "command.storage.link" => array:2 [
+              "concrete" => Closure() {#1306 …4}
+              "shared" => true
+            ]
+            "command.up" => array:2 [
+              "concrete" => Closure() {#1307 …4}
+              "shared" => true
+            ]
+            "command.view.cache" => array:2 [
+              "concrete" => Closure() {#1308 …4}
+              "shared" => true
+            ]
+            "command.view.clear" => array:2 [
+              "concrete" => Closure($app) {#1309 …4}
+              "shared" => true
+            ]
+            "command.cache.table" => array:2 [
+              "concrete" => Closure($app) {#1310 …4}
+              "shared" => true
+            ]
+            "command.cast.make" => array:2 [
+              "concrete" => Closure($app) {#1311 …4}
+              "shared" => true
+            ]
+            "command.channel.make" => array:2 [
+              "concrete" => Closure($app) {#1312 …4}
+              "shared" => true
+            ]
+            "command.component.make" => array:2 [
+              "concrete" => Closure($app) {#1313 …4}
+              "shared" => true
+            ]
+            "command.console.make" => array:2 [
+              "concrete" => Closure($app) {#1314 …4}
+              "shared" => true
+            ]
+            "command.controller.make" => array:2 [
+              "concrete" => Closure($app) {#1315 …4}
+              "shared" => true
+            ]
+            "command.event.generate" => array:2 [
+              "concrete" => Closure() {#1316 …4}
+              "shared" => true
+            ]
+            "command.event.make" => array:2 [
+              "concrete" => Closure($app) {#1317 …4}
+              "shared" => true
+            ]
+            "command.exception.make" => array:2 [
+              "concrete" => Closure($app) {#1318 …4}
+              "shared" => true
+            ]
+            "command.factory.make" => array:2 [
+              "concrete" => Closure($app) {#1319 …4}
+              "shared" => true
+            ]
+            "command.job.make" => array:2 [
+              "concrete" => Closure($app) {#1320 …4}
+              "shared" => true
+            ]
+            "command.listener.make" => array:2 [
+              "concrete" => Closure($app) {#1321 …4}
+              "shared" => true
+            ]
+            "command.mail.make" => array:2 [
+              "concrete" => Closure($app) {#1322 …4}
+              "shared" => true
+            ]
+            "command.middleware.make" => array:2 [
+              "concrete" => Closure($app) {#1323 …4}
+              "shared" => true
+            ]
+            "command.model.make" => array:2 [
+              "concrete" => Closure($app) {#1324 …4}
+              "shared" => true
+            ]
+            "command.notification.make" => array:2 [
+              "concrete" => Closure($app) {#1325 …4}
+              "shared" => true
+            ]
+            "command.notification.table" => array:2 [
+              "concrete" => Closure($app) {#1326 …4}
+              "shared" => true
+            ]
+            "command.observer.make" => array:2 [
+              "concrete" => Closure($app) {#1327 …4}
+              "shared" => true
+            ]
+            "command.policy.make" => array:2 [
+              "concrete" => Closure($app) {#1328 …4}
+              "shared" => true
+            ]
+            "command.provider.make" => array:2 [
+              "concrete" => Closure($app) {#1329 …4}
+              "shared" => true
+            ]
+            "command.queue.failed-table" => array:2 [
+              "concrete" => Closure($app) {#1330 …4}
+              "shared" => true
+            ]
+            "command.queue.table" => array:2 [
+              "concrete" => Closure($app) {#1331 …4}
+              "shared" => true
+            ]
+            "command.request.make" => array:2 [
+              "concrete" => Closure($app) {#1332 …4}
+              "shared" => true
+            ]
+            "command.resource.make" => array:2 [
+              "concrete" => Closure($app) {#1333 …4}
+              "shared" => true
+            ]
+            "command.rule.make" => array:2 [
+              "concrete" => Closure($app) {#1334 …4}
+              "shared" => true
+            ]
+            "command.seeder.make" => array:2 [
+              "concrete" => Closure($app) {#1335 …4}
+              "shared" => true
+            ]
+            "command.session.table" => array:2 [
+              "concrete" => Closure($app) {#1336 …4}
+              "shared" => true
+            ]
+            "command.serve" => array:2 [
+              "concrete" => Closure() {#1337 …4}
+              "shared" => true
+            ]
+            "command.stub.publish" => array:2 [
+              "concrete" => Closure() {#1338 …4}
+              "shared" => true
+            ]
+            "command.test.make" => array:2 [
+              "concrete" => Closure($app) {#1339 …4}
+              "shared" => true
+            ]
+            "command.vendor.publish" => array:2 [
+              "concrete" => Closure($app) {#1340 …4}
+              "shared" => true
+            ]
+            "migration.repository" => array:2 [
+              "concrete" => Closure($app) {#1343 …4}
+              "shared" => true
+            ]
+            "migrator" => array:2 [
+              "concrete" => Closure($app) {#1344 …4}
+              "shared" => true
+            ]
+            "migration.creator" => array:2 [
+              "concrete" => Closure($app) {#1345 …4}
+              "shared" => true
+            ]
+            "command.migrate" => array:2 [
+              "concrete" => Closure($app) {#1346 …4}
+              "shared" => true
+            ]
+            "command.migrate.fresh" => array:2 [
+              "concrete" => Closure() {#1347 …4}
+              "shared" => true
+            ]
+            "command.migrate.install" => array:2 [
+              "concrete" => Closure($app) {#1348 …4}
+              "shared" => true
+            ]
+            "command.migrate.refresh" => array:2 [
+              "concrete" => Closure() {#1349 …4}
+              "shared" => true
+            ]
+            "command.migrate.reset" => array:2 [
+              "concrete" => Closure($app) {#1350 …4}
+              "shared" => true
+            ]
+            "command.migrate.rollback" => array:2 [
+              "concrete" => Closure($app) {#1351 …4}
+              "shared" => true
+            ]
+            "command.migrate.status" => array:2 [
+              "concrete" => Closure($app) {#1352 …4}
+              "shared" => true
+            ]
+            "command.migrate.make" => array:2 [
+              "concrete" => Closure($app) {#1353 …4}
+              "shared" => true
+            ]
+            "composer" => array:2 [
+              "concrete" => Closure($app) {#1356 …4}
+              "shared" => true
+            ]
+            "hash" => array:2 [
+              "concrete" => Closure($app) {#1358 …4}
+              "shared" => true
+            ]
+            "hash.driver" => array:2 [
+              "concrete" => Closure($app) {#1359 …4}
+              "shared" => true
+            ]
+            "mail.manager" => array:2 [
+              "concrete" => Closure($app) {#1361 …4}
+              "shared" => true
+            ]
+            "mailer" => array:2 [
+              "concrete" => Closure($app) {#1362 …4}
+              "shared" => false
+            ]
+            "Illuminate\Mail\Markdown" => array:2 [
+              "concrete" => Closure($app) {#1363 …4}
+              "shared" => true
+            ]
+            "Illuminate\Contracts\Pipeline\Hub" => array:2 [
+              "concrete" => Closure($container, $parameters = []) {#1365 …5}
+              "shared" => true
+            ]
+            "redis" => array:2 [
+              "concrete" => Closure($app) {#1367 …4}
+              "shared" => true
+            ]
+            "redis.connection" => array:2 [
+              "concrete" => Closure($app) {#1368 …4}
+              "shared" => false
+            ]
+            "auth.password" => array:2 [
+              "concrete" => Closure($app) {#1370 …4}
+              "shared" => true
+            ]
+            "auth.password.broker" => array:2 [
+              "concrete" => Closure($app) {#1371 …4}
+              "shared" => false
+            ]
+            "translation.loader" => array:2 [
+              "concrete" => Closure($app) {#1373 …4}
+              "shared" => true
+            ]
+            "translator" => array:2 [
+              "concrete" => Closure($app) {#1374 …4}
+              "shared" => true
+            ]
+            "validation.presence" => array:2 [
+              "concrete" => Closure($app) {#1376 …4}
+              "shared" => true
+            ]
+            "validator" => array:2 [
+              "concrete" => Closure($app) {#1377 …4}
+              "shared" => true
+            ]
+            "command.ide-helper.generate" => array:2 [
+              "concrete" => Closure($app) {#1383 …5}
+              "shared" => true
+            ]
+            "command.ide-helper.models" => array:2 [
+              "concrete" => Closure($app) {#1384 …4}
+              "shared" => true
+            ]
+            "command.ide-helper.meta" => array:2 [
+              "concrete" => Closure($app) {#1385 …5}
+              "shared" => true
+            ]
+            "command.ide-helper.eloquent" => array:2 [
+              "concrete" => Closure($app) {#1386 …4}
+              "shared" => true
+            ]
+            "command.tinker" => array:2 [
+              "concrete" => Closure() {#1390 …4}
+              "shared" => true
+            ]
+            "html" => array:2 [
+              "concrete" => Closure($app) {#1393 …4}
+              "shared" => true
+            ]
+            "form" => array:2 [
+              "concrete" => Closure($app) {#1394 …4}
+              "shared" => true
+            ]
+          ]
+          #methodBindings: []
+          #instances: array:121 [
+            "path" => "/var/www/Projects/FREEMANNA/app"
+            "path.base" => "/var/www/Projects/FREEMANNA"
+            "path.lang" => "/var/www/Projects/FREEMANNA/resources/lang"
+            "path.config" => "/var/www/Projects/FREEMANNA/config"
+            "path.public" => "/var/www/Projects/FREEMANNA/public"
+            "path.storage" => "/var/www/Projects/FREEMANNA/storage"
+            "path.database" => "/var/www/Projects/FREEMANNA/database"
+            "path.resources" => "/var/www/Projects/FREEMANNA/resources"
+            "path.bootstrap" => "/var/www/Projects/FREEMANNA/bootstrap"
+            "app" => Illuminate\Foundation\Application {#2}
+            "Illuminate\Container\Container" => Illuminate\Foundation\Application {#2}
+            "events" => Illuminate\Events\Dispatcher {#26}
+            "Illuminate\Contracts\Console\Kernel" => App\Console\Kernel {#28}
+            "config" => Illuminate\Config\Repository {#38
+              #items: array:23 [ …23]
+            }
+            "Illuminate\Foundation\PackageManifest" => Illuminate\Foundation\PackageManifest {#44
+              +files: Illuminate\Filesystem\Filesystem {#51}
+              +basePath: "/var/www/Projects/FREEMANNA"
+              +vendorPath: "/var/www/Projects/FREEMANNA/vendor"
+              +manifestPath: "/var/www/Projects/FREEMANNA/bootstrap/cache/packages.php"
+              +manifest: array:13 [ …13]
+            }
+            "request" => Illuminate\Http\Request {#58
+              #json: null
+              #convertedFiles: null
+              #userResolver: null
+              #routeResolver: null
+              +attributes: Symfony\Component\HttpFoundation\ParameterBag {#50 …1}
+              +request: Symfony\Component\HttpFoundation\ParameterBag {#54 …1}
+              +query: Symfony\Component\HttpFoundation\InputBag {#47 …1}
+              +server: Symfony\Component\HttpFoundation\ServerBag {#52 …1}
+              +files: Symfony\Component\HttpFoundation\FileBag {#49 …1}
+              +cookies: Symfony\Component\HttpFoundation\InputBag {#45 …1}
+              +headers: Symfony\Component\HttpFoundation\HeaderBag {#56 …2}
+              #content: null
+              #languages: null
+              #charsets: null
+              #encodings: null
+              #acceptableContentTypes: null
+              #pathInfo: null
+              #requestUri: null
+              #baseUrl: null
+              #basePath: null
+              #method: null
+              #format: null
+              #session: null
+              #locale: null
+              #defaultLocale: "en"
+              -preferredFormat: null
+              -isHostValid: true
+              -isForwardedValid: true
+              -isSafeContentPreferred: null
+              pathInfo: "/"
+              requestUri: "/"
+              baseUrl: ""
+              basePath: ""
+              method: "GET"
+              format: "html"
+            }
+            "Facade\Ignition\LogRecorder\LogRecorder" => Facade\Ignition\LogRecorder\LogRecorder {#120
+              #logMessages: []
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            "Facade\Ignition\DumpRecorder\DumpRecorder" => Facade\Ignition\DumpRecorder\DumpRecorder {#118
+              #dumps: []
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            "Facade\Ignition\QueryRecorder\QueryRecorder" => Facade\Ignition\QueryRecorder\QueryRecorder {#121
+              #queries: array:3 [ …3]
+              #app: Illuminate\Foundation\Application {#2}
+            }
+            "flare.http" => Facade\FlareClient\Http\Client {#125
+              -apiToken: null
+              -apiSecret: null
+              -baseUrl: "https://flareapp.io/api"
+              -timeout: 10
+            }
+            "Facade\FlareClient\Flare" => Facade\FlareClient\Flare {#126
+              -client: Facade\FlareClient\Http\Client {#125}
+              -api: Facade\FlareClient\Api {#127 …2}
+              -middleware: array:8 [ …8]
+              -recorder: Facade\FlareClient\Glows\Recorder {#123 …1}
+              -applicationPath: "/var/www/Projects/FREEMANNA"
+              -container: Illuminate\Foundation\Application {#2}
+              -contextDetector: Facade\Ignition\Context\LaravelContextDetector {#124}
+              -previousExceptionHandler: null
+              -previousErrorHandler: null
+              -messageLevel: null
+              -stage: "local"
+              -userProvidedContext: []
+            }
+            "Facade\IgnitionContracts\SolutionProviderRepository" => Facade\Ignition\SolutionProviders\SolutionProviderRepository {#140
+              #solutionProviders: Illuminate\Support\Collection {#141 …1}
+            }
+            "Illuminate\Contracts\Debug\ExceptionHandler" => NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler {#21
+              #appExceptionHandler: App\Exceptions\Handler {#164 …4}
+              #container: Illuminate\Foundation\Application {#2}
+            }
+            "db.factory" => Illuminate\Database\Connectors\ConnectionFactory {#48
+              #container: Illuminate\Foundation\Application {#2}
+            }
+            "db" => Illuminate\Database\DatabaseManager {#60 …}
+            "view.engine.resolver" => Illuminate\View\Engines\EngineResolver {#181
+              #resolvers: array:3 [ …3]
+              #resolved: []
+            }
+            "files" => Illuminate\Filesystem\Filesystem {#188}
+            "blade.compiler" => Illuminate\View\Compilers\BladeCompiler {#187
+              #extensions: []
+              #customDirectives: []
+              #conditions: []
+              #precompilers: []
+              #path: null
+              #compilers: array:3 [ …3]
+              #rawTags: array:2 [ …2]
+              #contentTags: array:2 [ …2]
+              #escapedTags: array:2 [ …2]
+              #echoFormat: "e(%s)"
+              #footer: []
+              #rawBlocks: []
+              #classComponentAliases: []
+              #compilesComponentTags: true
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #cachePath: "/var/www/Projects/FREEMANNA/storage/framework/views"
+              #firstCaseInSwitch: true
+              -encodingOptions: 15
+              #lastSection: null
+              #forElseCounter: 0
+            }
+            "log" => Illuminate\Log\LogManager {#186
+              #app: Illuminate\Foundation\Application {#2}
+              #channels: []
+              #customCreators: array:1 [ …1]
+              #dateFormat: "Y-m-d H:i:s"
+              #levels: array:8 [ …8]
+            }
+            "queue" => Illuminate\Queue\QueueManager {#200
+              #app: Illuminate\Foundation\Application {#2}
+              #connections: []
+              #connectors: array:6 [ …6]
+            }
+            "router" => Illuminate\Routing\Router {#217
+              #events: Illuminate\Events\Dispatcher {#26}
+              #container: Illuminate\Foundation\Application {#2}
+              #routes: Illuminate\Routing\RouteCollection {#218
+                #routes: array:6 [ …6]
+                #allRoutes: array:98 [ …98]
+                #nameList: array:92 [ …92]
+                #actionList: array:81 [ …81]
+              }
+              #current: null
+              #currentRequest: null
+              #middleware: []
+              #middlewareGroups: []
+              +middlewarePriority: []
+              #binders: []
+              #patterns: []
+              #groupStack: []
+            }
+            "date" => Illuminate\Support\DateFactory {#230}
+            "routes" => Illuminate\Routing\RouteCollection {#218}
+            "url" => Illuminate\Routing\UrlGenerator {#240
+              #routes: Illuminate\Routing\RouteCollection {#218}
+              #request: Illuminate\Http\Request {#58}
+              #assetRoot: null
+              #forcedRoot: null
+              #forceScheme: null
+              #cachedRoot: null
+              #cachedScheme: null
+              #rootNamespace: "App\Http\Controllers"
+              #sessionResolver: Closure() {#242 …4}
+              #keyResolver: Closure() {#243 …4}
+              #formatHostUsing: null
+              #formatPathUsing: null
+              #routeGenerator: null
+            }
+            "Spatie\MediaLibrary\MediaRepository" => Spatie\MediaLibrary\MediaRepository {#1444
+              #model: Spatie\MediaLibrary\Models\Media {#1445 …27}
+            }
+            "filesystem" => Illuminate\Filesystem\FilesystemManager {#1461
+              #app: Illuminate\Foundation\Application {#2}
+              #disks: []
+              #customCreators: []
+            }
+            "cache" => Illuminate\Cache\CacheManager {#1460
+              #app: Illuminate\Foundation\Application {#2}
+              #stores: array:1 [ …1]
+              #customCreators: []
+            }
+            "command.cache.clear" => Illuminate\Cache\Console\ClearCommand {#1459
+              #name: "cache:clear"
+              #description: "Flush the application cache"
+              #cache: Illuminate\Cache\CacheManager {#1460}
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1425 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "cache:clear"
+              -hidden: false
+              -help: ""
+              -description: "Flush the application cache"
+            }
+            "command.cache.forget" => Illuminate\Cache\Console\ForgetCommand {#1474
+              #signature: "cache:forget {key : The key to remove} {store? : The store to remove the key from}"
+              #description: "Remove an item from the cache"
+              #cache: Illuminate\Cache\CacheManager {#1460}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "cache:forget"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1477 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "cache:forget"
+              -hidden: false
+              -help: ""
+              -description: "Remove an item from the cache"
+            }
+            "command.clear-compiled" => Illuminate\Foundation\Console\ClearCompiledCommand {#1478
+              #name: "clear-compiled"
+              #description: "Remove the compiled class file"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1479 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "clear-compiled"
+              -hidden: false
+              -help: ""
+              -description: "Remove the compiled class file"
+            }
+            "command.auth.resets.clear" => Illuminate\Auth\Console\ClearResetsCommand {#1480
+              #signature: "auth:clear-resets {name? : The name of the password broker}"
+              #description: "Flush expired password reset tokens"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "auth:clear-resets"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1482 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "auth:clear-resets"
+              -hidden: false
+              -help: ""
+              -description: "Flush expired password reset tokens"
+            }
+            "command.config.cache" => Illuminate\Foundation\Console\ConfigCacheCommand {#1483
+              #name: "config:cache"
+              #description: "Create a cache file for faster configuration loading"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1484 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "config:cache"
+              -hidden: false
+              -help: ""
+              -description: "Create a cache file for faster configuration loading"
+            }
+            "command.config.clear" => Illuminate\Foundation\Console\ConfigClearCommand {#1485
+              #name: "config:clear"
+              #description: "Remove the configuration cache file"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1486 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "config:clear"
+              -hidden: false
+              -help: ""
+              -description: "Remove the configuration cache file"
+            }
+            "command.db.wipe" => Illuminate\Database\Console\WipeCommand {#1487
+              #name: "db:wipe"
+              #description: "Drop all tables, views, and types"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1488 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "db:wipe"
+              -hidden: false
+              -help: ""
+              -description: "Drop all tables, views, and types"
+            }
+            "command.down" => Illuminate\Foundation\Console\DownCommand {#1493
+              #signature: """
+                down {--message= : The message for the maintenance mode}\n
+                                                 {--retry= : The number of seconds after which the request may be retried}\n
+                                                 {--allow=* : IP or networks allowed to access the application while in maintenance mode}
+                """
+              #description: "Put the application into maintenance mode"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "down"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1497 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "down"
+              -hidden: false
+              -help: ""
+              -description: "Put the application into maintenance mode"
+            }
+            "command.environment" => Illuminate\Foundation\Console\EnvironmentCommand {#1498
+              #name: "env"
+              #description: "Display the current framework environment"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1499 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "env"
+              -hidden: false
+              -help: ""
+              -description: "Display the current framework environment"
+            }
+            "command.event.cache" => Illuminate\Foundation\Console\EventCacheCommand {#1500
+              #signature: "event:cache"
+              #description: "Discover and cache the application's events and listeners"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "event:cache"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1501 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "event:cache"
+              -hidden: false
+              -help: ""
+              -description: "Discover and cache the application's events and listeners"
+            }
+            "command.event.clear" => Illuminate\Foundation\Console\EventClearCommand {#1502
+              #name: "event:clear"
+              #description: "Clear all cached events and listeners"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1503 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "event:clear"
+              -hidden: false
+              -help: ""
+              -description: "Clear all cached events and listeners"
+            }
+            "command.event.list" => Illuminate\Foundation\Console\EventListCommand {#1504
+              #signature: "event:list {--event= : Filter the events by name}"
+              #description: "List the application's events and listeners"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "event:list"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1506 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "event:list"
+              -hidden: false
+              -help: ""
+              -description: "List the application's events and listeners"
+            }
+            "command.key.generate" => Illuminate\Foundation\Console\KeyGenerateCommand {#1507
+              #signature: """
+                key:generate\n
+                                    {--show : Display the key instead of modifying files}\n
+                                    {--force : Force the operation to run when in production}
+                """
+              #description: "Set the application key"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "key:generate"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1510 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "key:generate"
+              -hidden: false
+              -help: ""
+              -description: "Set the application key"
+            }
+            "command.optimize" => Illuminate\Foundation\Console\OptimizeCommand {#1511
+              #name: "optimize"
+              #description: "Cache the framework bootstrap files"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1512 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "optimize"
+              -hidden: false
+              -help: ""
+              -description: "Cache the framework bootstrap files"
+            }
+            "command.optimize.clear" => Illuminate\Foundation\Console\OptimizeClearCommand {#1513
+              #name: "optimize:clear"
+              #description: "Remove the cached bootstrap files"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1514 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "optimize:clear"
+              -hidden: false
+              -help: ""
+              -description: "Remove the cached bootstrap files"
+            }
+            "command.package.discover" => Illuminate\Foundation\Console\PackageDiscoverCommand {#1515
+              #signature: "package:discover"
+              #description: "Rebuild the cached package manifest"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "package:discover"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1516 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "package:discover"
+              -hidden: false
+              -help: ""
+              -description: "Rebuild the cached package manifest"
+            }
+            "command.queue.failed" => Illuminate\Queue\Console\ListFailedCommand {#1517
+              #name: "queue:failed"
+              #description: "List all of the failed queue jobs"
+              #headers: array:5 [ …5]
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1518 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "queue:failed"
+              -hidden: false
+              -help: ""
+              -description: "List all of the failed queue jobs"
+            }
+            "command.queue.flush" => Illuminate\Queue\Console\FlushFailedCommand {#1519
+              #name: "queue:flush"
+              #description: "Flush all of the failed queue jobs"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1520 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "queue:flush"
+              -hidden: false
+              -help: ""
+              -description: "Flush all of the failed queue jobs"
+            }
+            "command.queue.forget" => Illuminate\Queue\Console\ForgetFailedCommand {#1521
+              #signature: "queue:forget {id : The ID of the failed job}"
+              #description: "Delete a failed queue job"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "queue:forget"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1523 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "queue:forget"
+              -hidden: false
+              -help: ""
+              -description: "Delete a failed queue job"
+            }
+            "queue.listener" => Illuminate\Queue\Listener {#1525
+              #commandPath: "/var/www/Projects/FREEMANNA"
+              #environment: null
+              #sleep: 3
+              #maxTries: 0
+              #outputHandler: Closure($type, $line) {#1535 …4}
+            }
+            "command.queue.listen" => Illuminate\Queue\Console\ListenCommand {#1524
+              #signature: """
+                queue:listen\n
+                                            {connection? : The name of connection}\n
+                                            {--delay=0 : The number of seconds to delay failed jobs}\n
+                                            {--force : Force the worker to run even in maintenance mode}\n
+                                            {--memory=128 : The memory limit in megabytes}\n
+                                            {--queue= : The queue to listen on}\n
+                                            {--sleep=3 : Number of seconds to sleep when no job is available}\n
+                                            {--timeout=60 : The number of seconds a child process can run}\n
+                                            {--tries=1 : Number of times to attempt a job before logging it failed}
+                """
+              #description: "Listen to a given queue"
+              #listener: Illuminate\Queue\Listener {#1525}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "queue:listen"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1534 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "queue:listen"
+              -hidden: false
+              -help: ""
+              -description: "Listen to a given queue"
+            }
+            "cache.store" => Illuminate\Cache\Repository {#1538
+              #store: Illuminate\Cache\FileStore {#1537 …3}
+              #events: Illuminate\Events\Dispatcher {#26}
+              #default: 3600
+            }
+            "command.queue.restart" => Illuminate\Queue\Console\RestartCommand {#1536
+              #name: "queue:restart"
+              #description: "Restart queue worker daemons after their current job"
+              #cache: Illuminate\Cache\Repository {#1538}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1539 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "queue:restart"
+              -hidden: false
+              -help: ""
+              -description: "Restart queue worker daemons after their current job"
+            }
+            "command.queue.retry" => Illuminate\Queue\Console\RetryCommand {#1540
+              #signature: """
+                queue:retry\n
+                                            {id?* : The ID of the failed job or "all" to retry all jobs}\n
+                                            {--range=* : Range of job IDs (numeric) to be retried}
+                """
+              #description: "Retry a failed queue job"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "queue:retry"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1543 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "queue:retry"
+              -hidden: false
+              -help: ""
+              -description: "Retry a failed queue job"
+            }
+            "queue.worker" => Illuminate\Queue\Worker {#1546
+              #manager: Illuminate\Queue\QueueManager {#200}
+              #events: Illuminate\Events\Dispatcher {#26}
+              #cache: null
+              #exceptions: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler {#21}
+              #isDownForMaintenance: Closure() {#1545 …4}
+              +shouldQuit: false
+              +paused: false
+            }
+            "command.queue.work" => Illuminate\Queue\Console\WorkCommand {#1544
+              #signature: """
+                queue:work\n
+                                            {connection? : The name of the queue connection to work}\n
+                                            {--queue= : The names of the queues to work}\n
+                                            {--daemon : Run the worker in daemon mode (Deprecated)}\n
+                                            {--once : Only process the next job on the queue}\n
+                                            {--stop-when-empty : Stop when the queue is empty}\n
+                                            {--delay=0 : The number of seconds to delay failed jobs}\n
+                                            {--force : Force the worker to run even in maintenance mode}\n
+                                            {--memory=128 : The memory limit in megabytes}\n
+                                            {--sleep=3 : Number of seconds to sleep when no job is available}\n
+                                            {--timeout=60 : The number of seconds a child process can run}\n
+                                            {--tries=1 : Number of times to attempt a job before logging it failed}
+                """
+              #description: "Start processing jobs on the queue as a daemon"
+              #worker: Illuminate\Queue\Worker {#1546}
+              #cache: Illuminate\Cache\Repository {#1538}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "queue:work"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1558 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "queue:work"
+              -hidden: false
+              -help: ""
+              -description: "Start processing jobs on the queue as a daemon"
+            }
+            "command.route.cache" => Illuminate\Foundation\Console\RouteCacheCommand {#1559
+              #name: "route:cache"
+              #description: "Create a route cache file for faster route registration"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1560 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "route:cache"
+              -hidden: false
+              -help: ""
+              -description: "Create a route cache file for faster route registration"
+            }
+            "command.route.clear" => Illuminate\Foundation\Console\RouteClearCommand {#1561
+              #name: "route:clear"
+              #description: "Remove the route cache file"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1562 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "route:clear"
+              -hidden: false
+              -help: ""
+              -description: "Remove the route cache file"
+            }
+            "command.route.list" => Illuminate\Foundation\Console\RouteListCommand {#1563
+              #name: "route:list"
+              #description: "List all registered routes"
+              #router: Illuminate\Routing\Router {#217}
+              #headers: array:6 [ …6]
+              #compactColumns: array:3 [ …3]
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1564 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "route:list"
+              -hidden: false
+              -help: ""
+              -description: "List all registered routes"
+            }
+            "command.seed" => Illuminate\Database\Console\Seeds\SeedCommand {#1573
+              #name: "db:seed"
+              #description: "Seed the database with records"
+              #resolver: Illuminate\Database\DatabaseManager {#60 …}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1574 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "db:seed"
+              -hidden: false
+              -help: ""
+              -description: "Seed the database with records"
+            }
+            "Illuminate\Console\Scheduling\ScheduleFinishCommand" => Illuminate\Console\Scheduling\ScheduleFinishCommand {#1580
+              #signature: "schedule:finish {id} {code=0}"
+              #description: "Handle the completion of a scheduled command"
+              #hidden: true
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "schedule:finish"
+              #help: null
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1583 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "schedule:finish"
+              -hidden: true
+              -help: ""
+              -description: "Handle the completion of a scheduled command"
+            }
+            "Illuminate\Console\Scheduling\ScheduleRunCommand" => Illuminate\Console\Scheduling\ScheduleRunCommand {#1584
+              #name: "schedule:run"
+              #description: "Run the scheduled commands"
+              #schedule: null
+              #startedAt: Illuminate\Support\Carbon @1610983261 {#1585 …14}
+              #eventsRan: false
+              #dispatcher: null
+              #handler: null
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1586 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "schedule:run"
+              -hidden: false
+              -help: ""
+              -description: "Run the scheduled commands"
+            }
+            "command.storage.link" => Illuminate\Foundation\Console\StorageLinkCommand {#1578
+              #signature: "storage:link {--relative : Create the symbolic link using relative paths}"
+              #description: "Create the symbolic links configured for the application"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "storage:link"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1587 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "storage:link"
+              -hidden: false
+              -help: ""
+              -description: "Create the symbolic links configured for the application"
+            }
+            "command.up" => Illuminate\Foundation\Console\UpCommand {#1588
+              #name: "up"
+              #description: "Bring the application out of maintenance mode"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1589 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "up"
+              -hidden: false
+              -help: ""
+              -description: "Bring the application out of maintenance mode"
+            }
+            "command.view.cache" => Illuminate\Foundation\Console\ViewCacheCommand {#1590
+              #signature: "view:cache"
+              #description: "Compile all of the application's Blade templates"
+              #laravel: Illuminate\Foundation\Application {#2}
+              #name: "view:cache"
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1591 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "view:cache"
+              -hidden: false
+              -help: ""
+              -description: "Compile all of the application's Blade templates"
+            }
+            "command.view.clear" => Illuminate\Foundation\Console\ViewClearCommand {#1592
+              #name: "view:clear"
+              #description: "Clear all compiled view files"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1593 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "view:clear"
+              -hidden: false
+              -help: ""
+              -description: "Clear all compiled view files"
+            }
+            "composer" => Illuminate\Support\Composer {#1595
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #workingPath: "/var/www/Projects/FREEMANNA"
+            }
+            "command.cache.table" => Illuminate\Cache\Console\CacheTableCommand {#1594
+              #name: "cache:table"
+              #description: "Create a migration for the cache database table"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #composer: Illuminate\Support\Composer {#1595}
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1596 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "cache:table"
+              -hidden: false
+              -help: ""
+              -description: "Create a migration for the cache database table"
+            }
+            "command.cast.make" => Illuminate\Foundation\Console\CastMakeCommand {#1597
+              #name: "make:cast"
+              #description: "Create a new custom Eloquent cast class"
+              #type: "Cast"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #reservedNames: array:68 [ …68]
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+              #help: null
+              #hidden: false
+              -application: Illuminate\Console\Application {#1398 …18}
+              -processTitle: null
+              -aliases: []
+              -definition: Symfony\Component\Console\Input\InputDefinition {#1598 …6}
+              -ignoreValidationErrors: false
+              -applicationDefinitionMerged: false
+              -applicationDefinitionMergedWithArgs: false
+              -code: null
+              -synopsis: []
+              -usages: []
+              -helperSet: Symfony\Component\Console\Helper\HelperSet {#1415 …2}
+              #input: null
+              #output: null
+              #verbosity: 32
+              #verbosityMap: array:5 [ …5]
+              -name: "make:cast"
+              -hidden: false
+              -help: ""
+              -description: "Create a new custom Eloquent cast class"
+            }
+            "command.channel.make" => Illuminate\Foundation\Console\ChannelMakeCommand {#1600
+              #name: "make:channel"
+              #description: "Create a new channel class"
+              #type: "Channel"
+              #files: Illuminate\Filesystem\Filesystem {#188}
+              #reservedNames: array:68 [ …68]
+              #laravel: Illuminate\Foundation\Application {#2}
+              #signature: null
+               …21
+            }
+            "command.component.make" => Illuminate\Foundation\Console\ComponentMakeCommand {#1603 …28}
+            "command.console.make" => Illuminate\Foundation\Console\ConsoleMakeCommand {#1608 …28}
+            "command.controller.make" => Illuminate\Routing\Console\ControllerMakeCommand {#1612 …28}
+            "command.event.generate" => Illuminate\Foundation\Console\EventGenerateCommand {#1621 …25}
+            "command.event.make" => Illuminate\Foundation\Console\EventMakeCommand {#1623 …28}
+            "command.exception.make" => Illuminate\Foundation\Console\ExceptionMakeCommand {#1626 …28}
+            "command.factory.make" => Illuminate\Database\Console\Factories\FactoryMakeCommand {#1631 …28}
+            "command.job.make" => Illuminate\Foundation\Console\JobMakeCommand {#1635 …28}
+            "command.listener.make" => Illuminate\Foundation\Console\ListenerMakeCommand {#1639 …28}
+            "command.mail.make" => Illuminate\Foundation\Console\MailMakeCommand {#1644 …28}
+            "command.middleware.make" => Illuminate\Routing\Console\MiddlewareMakeCommand {#1649 …28}
+            "command.model.make" => Illuminate\Foundation\Console\ModelMakeCommand {#1652 …28}
+            "command.notification.make" => Illuminate\Foundation\Console\NotificationMakeCommand {#1664 …28}
+            "command.notification.table" => Illuminate\Notifications\Console\NotificationTableCommand {#1669 …27}
+            "command.observer.make" => Illuminate\Foundation\Console\ObserverMakeCommand {#1671 …28}
+            "command.policy.make" => Illuminate\Foundation\Console\PolicyMakeCommand {#1675 …28}
+            "command.provider.make" => Illuminate\Foundation\Console\ProviderMakeCommand {#1680 …28}
+            "command.queue.failed-table" => Illuminate\Queue\Console\FailedTableCommand {#1683 …27}
+            "command.queue.table" => Illuminate\Queue\Console\TableCommand {#1685 …27}
+            "command.request.make" => Illuminate\Foundation\Console\RequestMakeCommand {#1687 …28}
+            "command.resource.make" => Illuminate\Foundation\Console\ResourceMakeCommand {#1690 …28}
+            "command.rule.make" => Illuminate\Foundation\Console\RuleMakeCommand {#1694 …28}
+            "command.seeder.make" => Illuminate\Database\Console\Seeds\SeederMakeCommand {#1697 …29}
+            "command.session.table" => Illuminate\Session\Console\SessionTableCommand {#1700 …27}
+            "command.serve" => Illuminate\Foundation\Console\ServeCommand {#1702 …26}
+            "command.stub.publish" => Illuminate\Foundation\Console\StubPublishCommand {#1707 …25}
+            "command.test.make" => Illuminate\Foundation\Console\TestMakeCommand {#1710 …28}
+            "command.vendor.publish" => Illuminate\Foundation\Console\VendorPublishCommand {#1714 …28}
+            "migration.repository" => Illuminate\Database\Migrations\DatabaseMigrationRepository {#1721 …3}
+            "migrator" => Illuminate\Database\Migrations\Migrator {#1722 …7}
+            "command.migrate" => Illuminate\Database\Console\Migrations\MigrateCommand {#1720 …26}
+            "command.migrate.fresh" => Illuminate\Database\Console\Migrations\FreshCommand {#1731 …25}
+            "command.migrate.install" => Illuminate\Database\Console\Migrations\InstallCommand {#1742 …26}
+            "command.migrate.refresh" => Illuminate\Database\Console\Migrations\RefreshCommand {#1745 …25}
+            "command.migrate.reset" => Illuminate\Database\Console\Migrations\ResetCommand {#1754 …26}
+            "command.migrate.rollback" => Illuminate\Database\Console\Migrations\RollbackCommand {#1761 …26}
+            "command.migrate.status" => Illuminate\Database\Console\Migrations\StatusCommand {#1769 …26}
+            "migration.creator" => Illuminate\Database\Migrations\MigrationCreator {#1774 …3}
+            "command.migrate.make" => Illuminate\Database\Console\Migrations\MigrateMakeCommand {#1775 …27}
+            "command.ide-helper.generate" => Barryvdh\LaravelIdeHelper\Console\GeneratorCommand {#1783 …29}
+            "command.ide-helper.models" => Barryvdh\LaravelIdeHelper\Console\ModelsCommand {#1789 …40}
+            "command.ide-helper.meta" => Barryvdh\LaravelIdeHelper\Console\MetaCommand {#1801 …29}
+            "command.ide-helper.eloquent" => Barryvdh\LaravelIdeHelper\Console\EloquentCommand {#1804 …26}
+            "command.tinker" => Laravel\Tinker\Console\TinkerCommand {#1806 …26}
+          ]
+          #aliases: array:85 [
+            "Illuminate\Foundation\Application" => "app"
+            "Illuminate\Contracts\Container\Container" => "app"
+            "Illuminate\Contracts\Foundation\Application" => "app"
+            "Psr\Container\ContainerInterface" => "app"
+            "Illuminate\Auth\AuthManager" => "auth"
+            "Illuminate\Contracts\Auth\Factory" => "auth"
+            "Illuminate\Contracts\Auth\Guard" => "auth.driver"
+            "Illuminate\View\Compilers\BladeCompiler" => "blade.compiler"
+            "Illuminate\Cache\CacheManager" => "cache"
+            "Illuminate\Contracts\Cache\Factory" => "cache"
+            "Illuminate\Cache\Repository" => "cache.store"
+            "Illuminate\Contracts\Cache\Repository" => "cache.store"
+            "Psr\SimpleCache\CacheInterface" => "cache.store"
+            "Symfony\Component\Cache\Adapter\Psr16Adapter" => "cache.psr6"
+            "Symfony\Component\Cache\Adapter\AdapterInterface" => "cache.psr6"
+            "Psr\Cache\CacheItemPoolInterface" => "cache.psr6"
+            "Illuminate\Config\Repository" => "config"
+            "Illuminate\Contracts\Config\Repository" => "config"
+            "Illuminate\Cookie\CookieJar" => "cookie"
+            "Illuminate\Contracts\Cookie\Factory" => "cookie"
+            "Illuminate\Contracts\Cookie\QueueingFactory" => "cookie"
+            "Illuminate\Encryption\Encrypter" => "encrypter"
+            "Illuminate\Contracts\Encryption\Encrypter" => "encrypter"
+            "Illuminate\Database\DatabaseManager" => "db"
+            "Illuminate\Database\ConnectionResolverInterface" => "db"
+            "Illuminate\Database\Connection" => "db.connection"
+            "Illuminate\Database\ConnectionInterface" => "db.connection"
+            "Illuminate\Events\Dispatcher" => "events"
+            "Illuminate\Contracts\Events\Dispatcher" => "events"
+            "Illuminate\Filesystem\Filesystem" => "files"
+            "Illuminate\Filesystem\FilesystemManager" => "filesystem"
+            "Illuminate\Contracts\Filesystem\Factory" => "filesystem"
+            "Illuminate\Contracts\Filesystem\Filesystem" => "filesystem.disk"
+            "Illuminate\Contracts\Filesystem\Cloud" => "filesystem.cloud"
+            "Illuminate\Hashing\HashManager" => "hash"
+            "Illuminate\Contracts\Hashing\Hasher" => "hash.driver"
+            "Illuminate\Translation\Translator" => "translator"
+            "Illuminate\Contracts\Translation\Translator" => "translator"
+            "Illuminate\Log\LogManager" => "log"
+            "Psr\Log\LoggerInterface" => "log"
+            "Illuminate\Mail\MailManager" => "mail.manager"
+            "Illuminate\Contracts\Mail\Factory" => "mail.manager"
+            "Illuminate\Mail\Mailer" => "mailer"
+            "Illuminate\Contracts\Mail\Mailer" => "mailer"
+            "Illuminate\Contracts\Mail\MailQueue" => "mailer"
+            "Illuminate\Auth\Passwords\PasswordBrokerManager" => "auth.password"
+            "Illuminate\Contracts\Auth\PasswordBrokerFactory" => "auth.password"
+            "Illuminate\Auth\Passwords\PasswordBroker" => "auth.password.broker"
+            "Illuminate\Contracts\Auth\PasswordBroker" => "auth.password.broker"
+            "Illuminate\Queue\QueueManager" => "queue"
+            "Illuminate\Contracts\Queue\Factory" => "queue"
+            "Illuminate\Contracts\Queue\Monitor" => "queue"
+            "Illuminate\Contracts\Queue\Queue" => "queue.connection"
+            "Illuminate\Queue\Failed\FailedJobProviderInterface" => "queue.failer"
+            "Illuminate\Routing\Redirector" => "redirect"
+            "Illuminate\Redis\RedisManager" => "redis"
+            "Illuminate\Contracts\Redis\Factory" => "redis"
+            "Illuminate\Redis\Connections\Connection" => "redis.connection"
+            "Illuminate\Contracts\Redis\Connection" => "redis.connection"
+            "Illuminate\Http\Request" => "request"
+            "Symfony\Component\HttpFoundation\Request" => "request"
+            "Illuminate\Routing\Router" => "router"
+            "Illuminate\Contracts\Routing\Registrar" => "router"
+            "Illuminate\Contracts\Routing\BindingRegistrar" => "router"
+            "Illuminate\Session\SessionManager" => "session"
+            "Illuminate\Session\Store" => "session.store"
+            "Illuminate\Contracts\Session\Session" => "session.store"
+            "Illuminate\Routing\UrlGenerator" => "url"
+            "Illuminate\Contracts\Routing\UrlGenerator" => "url"
+            "Illuminate\Validation\Factory" => "validator"
+            "Illuminate\Contracts\Validation\Factory" => "validator"
+            "Illuminate\View\Factory" => "view"
+            "Illuminate\Contracts\View\Factory" => "view"
+            "Illuminate\Contracts\Notifications\Dispatcher" => "Illuminate\Notifications\ChannelManager"
+            "Illuminate\Contracts\Notifications\Factory" => "Illuminate\Notifications\ChannelManager"
+            "Facade\FlareClient\Http\Client" => "flare.http"
+            "Intervention\Image\ImageManager" => "image"
+            "Maatwebsite\Excel\Excel" => "excel"
+            "Maatwebsite\Excel\Exporter" => "excel"
+            "Maatwebsite\Excel\Importer" => "excel"
+            "Illuminate\Contracts\Broadcasting\Factory" => "Illuminate\Broadcasting\BroadcastManager"
+            "Illuminate\Contracts\Bus\Dispatcher" => "Illuminate\Bus\Dispatcher"
+            "Illuminate\Contracts\Bus\QueueingDispatcher" => "Illuminate\Bus\Dispatcher"
+            "Collective\Html\HtmlBuilder" => "html"
+            "Collective\Html\FormBuilder" => "form"
+          ]
+          #abstractAliases: array:46 [
+            "app" => array:4 [ …4]
+            "auth" => array:2 [ …2]
+            "auth.driver" => array:1 [ …1]
+            "blade.compiler" => array:1 [ …1]
+            "cache" => array:2 [ …2]
+            "cache.store" => array:3 [ …3]
+            "cache.psr6" => array:3 [ …3]
+            "config" => array:2 [ …2]
+            "cookie" => array:3 [ …3]
+            "encrypter" => array:2 [ …2]
+            "db" => array:2 [ …2]
+            "db.connection" => array:2 [ …2]
+            "events" => array:2 [ …2]
+            "files" => array:1 [ …1]
+            "filesystem" => array:2 [ …2]
+            "filesystem.disk" => array:1 [ …1]
+            "filesystem.cloud" => array:1 [ …1]
+            "hash" => array:1 [ …1]
+            "hash.driver" => array:1 [ …1]
+            "translator" => array:2 [ …2]
+            "log" => array:2 [ …2]
+            "mail.manager" => array:2 [ …2]
+            "mailer" => array:3 [ …3]
+            "auth.password" => array:2 [ …2]
+            "auth.password.broker" => array:2 [ …2]
+            "queue" => array:3 [ …3]
+            "queue.connection" => array:1 [ …1]
+            "queue.failer" => array:1 [ …1]
+            "redirect" => array:1 [ …1]
+            "redis" => array:2 [ …2]
+            "redis.connection" => array:2 [ …2]
+            "request" => array:2 [ …2]
+            "router" => array:3 [ …3]
+            "session" => array:1 [ …1]
+            "session.store" => array:2 [ …2]
+            "url" => array:2 [ …2]
+            "validator" => array:2 [ …2]
+            "view" => array:2 [ …2]
+            "Illuminate\Notifications\ChannelManager" => array:2 [ …2]
+            "flare.http" => array:1 [ …1]
+            "image" => array:1 [ …1]
+            "excel" => array:3 [ …3]
+            "Illuminate\Broadcasting\BroadcastManager" => array:1 [ …1]
+            "Illuminate\Bus\Dispatcher" => array:2 [ …2]
+            "html" => array:1 [ …1]
+            "form" => array:1 [ …1]
+          ]
+          #extenders: array:1 [
+            "url" => array:1 [ …1]
+          ]
+          #tags: []
+          #buildStack: []
+          #with: []
+          +contextual: []
+          #reboundCallbacks: array:3 [
+            "request" => array:2 [ …2]
+            "events" => array:1 [ …1]
+            "routes" => array:1 [ …1]
+          ]
+          #globalResolvingCallbacks: []
+          #globalAfterResolvingCallbacks: []
+          #resolvingCallbacks: array:1 [
+            "Illuminate\Foundation\Http\FormRequest" => array:1 [ …1]
+          ]
+          #afterResolvingCallbacks: array:3 [
+            "Illuminate\Contracts\Validation\ValidatesWhenResolved" => array:1 [ …1]
+            "view" => array:5 [ …5]
+            "blade.compiler" => array:1 [ …1]
+          ]
+        }
+        #listeners: array:9 [
+          "Illuminate\Queue\Events\Looping" => array:1 [
+            0 => Closure($event, $payload) {#208 …5}
+          ]
+          "Illuminate\Database\Events\QueryExecuted" => array:1 [
+            0 => Closure($event, $payload) {#209 …5}
+          ]
+          "Illuminate\Log\Events\MessageLogged" => array:1 [
+            0 => Closure($event, $payload) {#210 …5}
+          ]
+          "Illuminate\Foundation\Events\LocaleUpdated" => array:1 [
+            0 => Closure($event, $payload) {#232 …5}
+          ]
+          "eloquent.creating: Spatie\MediaLibrary\Models\Media" => array:1 [
+            0 => Closure($event, $payload) {#236 …5}
+          ]
+          "eloquent.updating: Spatie\MediaLibrary\Models\Media" => array:1 [
+            0 => Closure($event, $payload) {#237 …5}
+          ]
+          "eloquent.updated: Spatie\MediaLibrary\Models\Media" => array:1 [
+            0 => Closure($event, $payload) {#238 …5}
+          ]
+          "eloquent.deleted: Spatie\MediaLibrary\Models\Media" => array:1 [
+            0 => Closure($event, $payload) {#239 …5}
+          ]
+          "Illuminate\Auth\Events\Registered" => array:1 [
+            0 => Closure($event, $payload) {#235 …5}
+          ]
+        ]
+        #wildcards: []
+        #wildcardsCache: array:25 [
+          "bootstrapping: Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables" => []
+          "bootstrapped: Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables" => []
+          "bootstrapping: Illuminate\Foundation\Bootstrap\LoadConfiguration" => []
+          "bootstrapped: Illuminate\Foundation\Bootstrap\LoadConfiguration" => []
+          "bootstrapping: Illuminate\Foundation\Bootstrap\HandleExceptions" => []
+          "bootstrapped: Illuminate\Foundation\Bootstrap\HandleExceptions" => []
+          "bootstrapping: Illuminate\Foundation\Bootstrap\RegisterFacades" => []
+          "bootstrapped: Illuminate\Foundation\Bootstrap\RegisterFacades" => []
+          "bootstrapping: Illuminate\Foundation\Bootstrap\SetRequestForConsole" => []
+          "bootstrapped: Illuminate\Foundation\Bootstrap\SetRequestForConsole" => []
+          "bootstrapping: Illuminate\Foundation\Bootstrap\RegisterProviders" => []
+          "bootstrapped: Illuminate\Foundation\Bootstrap\RegisterProviders" => []
+          "bootstrapping: Illuminate\Foundation\Bootstrap\BootProviders" => []
+          "eloquent.booting: Spatie\MediaLibrary\Models\Media" => []
+          "eloquent.booted: Spatie\MediaLibrary\Models\Media" => []
+          "bootstrapped: Illuminate\Foundation\Bootstrap\BootProviders" => []
+          "Illuminate\Console\Events\ArtisanStarting" => []
+          "Illuminate\Console\Events\CommandStarting" => []
+          "Illuminate\Database\Events\StatementPrepared" => []
+          "Illuminate\Database\Events\QueryExecuted" => []
+          "eloquent.booting: App\Markets" => []
+          "eloquent.booted: App\Markets" => []
+          "eloquent.retrieved: App\Markets" => []
+          "eloquent.booting: App\Investments" => []
+          "eloquent.booted: App\Investments" => []
+        ]
+        #queueResolver: Closure() {#27
+          class: "Illuminate\Events\EventServiceProvider"
+          this: Illuminate\Events\EventServiceProvider {#6 …}
+          use: {
+            $app: Illuminate\Foundation\Application {#2}
+          }
+          file: "./vendor/laravel/framework/src/Illuminate/Events/EventServiceProvider.php"
+          line: "18 to 20"
+        }
+      }
+      #fetchMode: 5
+      #transactions: 0
+      #recordsModified: true
+      #queryLog: []
+      #loggingQueries: false
+      #pretending: false
+      #doctrineConnection: null
+    }
+    +grammar: Illuminate\Database\Query\Grammars\MySqlGrammar {#1824}
+    +processor: Illuminate\Database\Query\Processors\MySqlProcessor {#1831}
+    +bindings: array:9 [
+      "select" => []
+      "from" => []
+      "join" => []
+      "where" => array:1 [
+        0 => App\Markets {#1845
+          #fillable: array:4 [
+            0 => "id"
+            1 => "closed"
+            2 => "updated_at"
+            3 => "created_at"
+          ]
+          #connection: "mysql"
+          #table: "markets"
+          #primaryKey: "id"
+          #keyType: "int"
+          +incrementing: true
+          #with: []
+          #withCount: []
+          #perPage: 15
+          +exists: true
+          +wasRecentlyCreated: false
+          #attributes: array:4 [
+            "id" => 23
+            "created_at" => "2021-01-17 22:08:01"
+            "updated_at" => "2021-01-18 15:21:01"
+            "closed" => 1
+          ]
+          #original: array:4 [
+            "id" => 23
+            "created_at" => "2021-01-17 22:08:01"
+            "updated_at" => "2021-01-18 15:21:01"
+            "closed" => 1
+          ]
+          #changes: []
+          #casts: []
+          #classCastCache: []
+          #dates: []
+          #dateFormat: null
+          #appends: []
+          #dispatchesEvents: []
+          #observables: []
+          #relations: []
+          #touches: []
+          +timestamps: true
+          #hidden: []
+          #visible: []
+          #guarded: array:1 [
+            0 => "*"
+          ]
+        }
+      ]
+      "groupBy" => []
+      "having" => []
+      "order" => []
+      "union" => []
+      "unionOrder" => []
+    ]
+    +aggregate: null
+    +columns: null
+    +distinct: false
+    +from: "investments"
+    +joins: null
+    +wheres: array:1 [
+      0 => array:5 [
+        "type" => "Basic"
+        "column" => "market_id"
+        "operator" => "="
+        "value" => App\Markets {#1845}
+        "boolean" => "and"
+      ]
+    ]
+    +groups: null
+    +havings: null
+    +orders: null
+    +limit: null
+    +offset: null
+    +unions: null
+    +unionLimit: null
+    +unionOffset: null
+    +unionOrders: null
+    +lock: null
+    +operators: array:30 [
+      0 => "="
+      1 => "<"
+      2 => ">"
+      3 => "<="
+      4 => ">="
+      5 => "<>"
+      6 => "!="
+      7 => "<=>"
+      8 => "like"
+      9 => "like binary"
+      10 => "not like"
+      11 => "ilike"
+      12 => "&"
+      13 => "|"
+      14 => "^"
+      15 => "<<"
+      16 => ">>"
+      17 => "rlike"
+      18 => "not rlike"
+      19 => "regexp"
+      20 => "not regexp"
+      21 => "~"
+      22 => "~*"
+      23 => "!~"
+      24 => "!~*"
+      25 => "similar to"
+      26 => "not similar to"
+      27 => "not ilike"
+      28 => "~~*"
+      29 => "!~~*"
+    ]
+    +useWritePdo: false
+  }
+  #model: App\Investments {#1834
+    #fillable: array:9 [
+      0 => "id"
+      1 => "user_id"
+      2 => "market_id"
+      3 => "pack_id"
+      4 => "limit_investment"
+      5 => "earnings"
+      6 => "user_pack_id"
+      7 => "updated_at"
+      8 => "created_at"
+    ]
+    #connection: null
+    #table: null
+    #primaryKey: "id"
+    #keyType: "int"
+    +incrementing: true
+    #with: []
+    #withCount: []
+    #perPage: 15
+    +exists: false
+    +wasRecentlyCreated: false
+    #attributes: []
+    #original: []
+    #changes: []
+    #casts: []
+    #classCastCache: []
+    #dates: []
+    #dateFormat: null
+    #appends: []
+    #dispatchesEvents: []
+    #observables: []
+    #relations: []
+    #touches: []
+    +timestamps: true
+    #hidden: []
+    #visible: []
+    #guarded: array:1 [
+      0 => "*"
+    ]
+  }
+  #eagerLoad: []
+  #localMacros: []
+  #onDelete: null
+  #passthru: array:19 [
+    0 => "insert"
+    1 => "insertOrIgnore"
+    2 => "insertGetId"
+    3 => "insertUsing"
+    4 => "getBindings"
+    5 => "toSql"
+    6 => "dump"
+    7 => "dd"
+    8 => "exists"
+    9 => "doesntExist"
+    10 => "count"
+    11 => "min"
+    12 => "max"
+    13 => "avg"
+    14 => "average"
+    15 => "sum"
+    16 => "getConnection"
+    17 => "raw"
+    18 => "getGrammar"
+  ]
+  #scopes: []
+  #removedScopes: []
+}

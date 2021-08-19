@@ -1,0 +1,27 @@
+.nav-item {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.nav-item a:hover{
+    color:#ed5d6f !important;
+}
+.nav-item a:active{
+    color:rgb(250, 250, 243) !important;
+}
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+img {
+    vertical-align: middle;
+}
